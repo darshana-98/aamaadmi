@@ -18,8 +18,8 @@ const useStyle = makeStyles((theme)=>({
 function IndexPage() {
   return (
 
-    <div className= "w-64 h-3 bg-gradient-to-br from-fuchsia-500 to-purple-600">
-      <div className="container">
+    <div className= "text-white bg-gradient-to-br from-fuchsia-500 to-purple-600">
+      <div className="container w-64 h-3 bg-img">
         <h1>
       
           <a>  "This is your fight"</a>
@@ -46,10 +46,10 @@ function IndexPage() {
      <input type="text" placeholder="Pin Code"></input>
       </FormControl>
       <FormControl>
-      <button class="bg-red-900 ...">Sign Up</button>
+      <button class="bg-red-900 ..." type="button">Sign Up</button>
       </FormControl>
-      </div>
     
+    </div>
     <br></br>
     <Image
         src="/photo.jpg"
@@ -60,7 +60,10 @@ function IndexPage() {
        
         />
 
-    <button class="bg-green-800...">CONTINUE TO THE SITE>> </button>
+   
+    <Link href='/app'>
+    <button class="bg-green-800..." type="button">CONTINUE TO THE SITE>> </button>
+    </Link>
     <div className="image-column">
     <Image
         src="/pic3.png"
@@ -72,9 +75,10 @@ function IndexPage() {
         
         </div>
          <h3>@2012-2017 Aam Aadmi Party.All Rights Reserved.</h3>
+  
     
+
     </div>
   )
 }
-
 export default IndexPage;
