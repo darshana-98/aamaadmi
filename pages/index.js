@@ -1,9 +1,12 @@
-import React from 'react';
+import React from 'react'; 
 import { FormControl, FormHelperText, InputLabel } from '@material-ui/core';
 import Head from 'next/head';
 import {makeStyles} from '@material-ui/core';
 import Image from 'next/image';
 import Link from 'next/link';
+import { NoSchemaIntrospectionCustomRule } from 'graphql';
+
+import Counter from './Counter';
 
 
 const useStyle = makeStyles((theme)=>({
@@ -14,70 +17,57 @@ const useStyle = makeStyles((theme)=>({
 }));
 
 
-
 function IndexPage() {
   return (
 
-    <div className= "text-white bg-gradient-to-br from-fuchsia-500 to-purple-600">
-      <div className="container w-64 h-3 bg-img">
+   <div>
+      <div className="container">
+
         <h1>
-      
-          <a>  "This is your fight"</a>
-      
+          <a>  SWEET MIXTURE 200 GM KOZHIKODANS</a>
         </h1>
+        <h2>$2.99</h2>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <p className="text-purple-700 text-opacity-100 ...">Stay connected with India’s fastest growing party as it redefines the political landscape in India.</p>
-        <h2>Sign up now</h2>
-       
-      <FormControl className="bg-blue-500">
-    <input type="text" placeholder="Name*" ></input> 
-    </FormControl>
-
-    <FormControl>
-    <input type="text" placeholder="Mobile No"></input>
-    </FormControl>
-    <br></br>
-    <FormControl>
-      <input type="text" placeholder="Email Id"></input>
-      </FormControl>
-      <br></br>
-     
-      <FormControl>
-     <input type="text" placeholder="Pin Code"></input>
-      </FormControl>
-      <FormControl>
-      <button class="bg-red-900 ..." type="button">Sign Up</button>
-      </FormControl>
-    
+        <p>33 in stock</p>
+        <Counter/>
+        <button className="new-btn">ADD TO CART</button>
+  <br></br>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <a class="active" href="#"><i class="fa fa-heart-o"></i>ADD TO WISHLIST</a> 
+    <a href="#"><i class="fa fa-share-alt"></i>SHARE</a> 
+ 
     </div>
-    <br></br>
-    <Image
-        src="/photo.jpg"
-        alt=""
-        width={425}
-        height={300}
-    
-       
-        />
-
-   
-    <Link href='/app'>
-    <button class="bg-green-800..." type="button">CONTINUE TO THE SITE>> </button>
-    </Link>
-    <div className="image-column">
-    <Image
-        src="/pic3.png"
-        alt=""
-        width={100}
-        height={100}
-       
-        />
-        
-        </div>
-         <h3>@2012-2017 Aam Aadmi Party.All Rights Reserved.</h3>
   
-    
+    <Image
+        src="/sweet1.jpg"
+        alt=""
+        width={250}
+        height={450}
+    />
+    <style jsx>{`
 
+    .container{
+         
+  
+      padding: 50px;
+      padding-bottom: 100px;
+      max-width: 336px;
+      color: black;
+      float: right;
+      height:375px;
+    }
+    .new-btn{
+      color:white;
+      background-color:black;
+      width:150px;
+      height:50px;
+      margin-bottom:20%;
+      margin-left:50%;
+      
+  }
+      
+    
+     `}</style>
     </div>
   )
 }
