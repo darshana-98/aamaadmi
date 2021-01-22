@@ -1,17 +1,37 @@
-import React , {useState,memo} from "react";
-const Num =() =>{
-  
-  const [Num,setCount]=useState(1);
-  console.log(Num,"Num");
-  return(
-    <div>
-      
-      <h3>{Num}</h3>
-      <button onClick={()=>setCount(Num-1)}>-</button>
-      <button onClick={()=>setCount(Num+1)}>+</button>
-      
-  
-    </div>
-  )
-}
-export default memo(Num);
+import React,{useState} from "react";
+const Counter=()=>{
+const [count, setCount] = useState(1) 
+const handleCount = (value) => !(count === 0 && value === -1) ? setCount(count + value) : count;
+
+
+return(
+<div className="mt-2">
+           
+            <div className="button">
+              <button className="button1" onClick={() => handleCount(-1)}>-</button>
+             
+            <input className="new-form" value={count}></input>
+            
+              <button className="button2" onClick={() => handleCount(1)} >+
+                
+              </button>
+              <style jsx>{`
+            .new-form{
+              width:40px;
+              height:45px;
+              text-align:center;
+            }
+            .button2{
+              width:40px;
+              height:50px;
+            
+            }
+            .button1{
+              width:40px;
+              height:50px;
+            }
+            `}</style>
+            </div>
+          </div>
+)}
+export default Counter;

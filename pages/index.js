@@ -5,8 +5,8 @@ import {makeStyles} from '@material-ui/core';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NoSchemaIntrospectionCustomRule } from 'graphql';
-
 import Counter from './Counter';
+
 
 
 const useStyle = makeStyles((theme)=>({
@@ -29,7 +29,8 @@ function IndexPage() {
         <h2>$2.99</h2>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <p>33 in stock</p>
-        <Counter/>
+       
+  <Counter/>
         <button className="new-btn">ADD TO CART</button>
   <br></br>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -63,9 +64,10 @@ function IndexPage() {
       height:50px;
       margin-bottom:20%;
       margin-left:50%;
-      
+      margin-top:-5%;
   }
-      
+  
+  
     
      `}</style>
     </div>
